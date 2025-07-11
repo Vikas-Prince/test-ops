@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-org/java-app-gitops.git
+    repoURL: https://github.com/Vikas-Prince/test-ops
     targetRevision: HEAD
     path: environments/dev
   destination:
