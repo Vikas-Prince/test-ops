@@ -10,7 +10,6 @@ resources:
   - secrets/secret.yaml
   - hpa.yaml
   - pdb.yaml
-  - probes.yaml
   - networkpolicy.yaml
   - priorityclass.yaml
   - resourcequota.yaml
