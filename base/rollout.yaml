@@ -16,12 +16,13 @@ spec:
         - pause: {}
       trafficRouting:
         nginx:
-          stableService: java-app-stable
+          nginx:
+          annotations:
+            nginx.ingress.kubernetes.io/canary: 'true'
+            nginx.ingress.kubernetes.io/canary-weight: '20'
           canaryService: java-app-canary
           rootService: java-app-root
-          annotations:
-            nginx.ingress.kubernetes.io/canary: "true"
-            nginx.ingress.kubernetes.io/canary-weight: "20"
+          stableService: java-app-stable
   selector:
     matchLabels:
       app: java-app
