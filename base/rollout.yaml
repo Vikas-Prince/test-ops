@@ -16,9 +16,9 @@ spec:
         - pause: {}
       trafficRouting:
         nginx:
-          stableService: service-stable
-          canaryService: service-canary
-          rootService: service-root
+          stableService: java-app-stable
+          canaryService: java-app-canary
+          rootService: java-app-canary
           annotationPrefix: nginx.ingress.kubernetes.io
   selector:
     matchLabels:
