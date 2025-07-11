@@ -1,0 +1,47 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: java-app
+spec:
+  replicas: 4
+  revisionHistoryLimit: 2
+  strategy:
+    canary:
+      steps:
+        - setWeight: 20
+        - pause: { duration: 1m }
+        - setWeight: 50
+        - pause: { duration: 2m }
+        - setWeight: 100
+        - pause: {}
+      trafficRouting:
+        nginx:
+          stableService: java-app-stable
+          canaryService: java-app-canary
+          rootService: java-app-root
+          annotationPrefix: nginx.ingress.kubernetes.io
+  selector:
+    matchLabels:
+      app: java-app
+  template:
+    metadata:
+      labels:
+        app: java-app
+    spec:
+      containers:
+        - name: java-container
+          image: myrepo/java-app:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: java-app-config
+            - secretRef:
+                name: java-app-secret
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
