@@ -4,9 +4,8 @@ metadata:
   name: java-app
 spec:
   strategy:
-    type: Recreate
   template:
     spec:
       containers:
         - name: java-container
-          image: vikasprince/java-app:dev
+          image: vikasprince/java-app:latest
