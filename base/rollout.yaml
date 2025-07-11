@@ -18,7 +18,7 @@ spec:
         nginx:
           stableService: java-app-stable
           canaryService: java-app-canary
-          rootService: java-app-canary
+          rootService: java-app-root
           annotationPrefix: nginx.ingress.kubernetes.io
   selector:
     matchLabels:
