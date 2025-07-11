@@ -4,8 +4,6 @@ metadata:
   name: java-app-ingress
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-by-weight: "50"
 spec:
   rules:
     - host: java-app.company.com
@@ -15,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: java-app-stable
+                name: java-app-root
                 port:
-                  number: 8080
+                  number: 80
