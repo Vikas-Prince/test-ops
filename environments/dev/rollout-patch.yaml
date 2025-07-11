@@ -9,4 +9,4 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: myrepo/java-app:dev
+          image: vikasprince/java-app:latest
