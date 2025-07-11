@@ -14,15 +14,6 @@ spec:
         - pause: { duration: 2m }
         - setWeight: 100
         - pause: {}
-      trafficRouting:
-        nginx:
-          nginx:
-          annotations:
-            nginx.ingress.kubernetes.io/canary: 'true'
-            nginx.ingress.kubernetes.io/canary-weight: '20'
-          canaryService: java-app-canary
-          rootService: java-app-root
-          stableService: java-app-stable
     type: RollingUpdate
   selector:
     matchLabels:
