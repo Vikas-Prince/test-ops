@@ -19,7 +19,9 @@ spec:
           stableService: java-app-stable
           canaryService: java-app-canary
           rootService: java-app-root
-          annotationPrefix: nginx.ingress.kubernetes.io
+          annotations:
+            nginx.ingress.kubernetes.io/canary: "true"
+            nginx.ingress.kubernetes.io/canary-weight: "20"
   selector:
     matchLabels:
       app: java-app
