@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: vikasprince/java-app:latest
+          image: vikasprince/techwave:v1
