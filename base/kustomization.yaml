@@ -4,6 +4,7 @@ resources:
   - rollout.yaml
   - service-stable.yaml
   - service-canary.yaml
+  - service-root.yaml
   - ingress.yaml
   - analysis-template.yaml
   - config/configmap.yaml
