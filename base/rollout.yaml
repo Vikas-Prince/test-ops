@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: myrepo/java-app:latest
+          image: vikasprince/java-app:latest
           ports:
             - containerPort: 8080
           envFrom:
