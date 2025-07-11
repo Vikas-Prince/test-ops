@@ -23,6 +23,7 @@ spec:
           canaryService: java-app-canary
           rootService: java-app-root
           stableService: java-app-stable
+    type: RollingUpdate
   selector:
     matchLabels:
       app: java-app
