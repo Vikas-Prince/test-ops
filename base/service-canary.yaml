@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: java-app
+    version: canary
   ports:
     - protocol: TCP
       port: 80
