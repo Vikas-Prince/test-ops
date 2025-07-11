@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: myrepo/java-app:staging
+          image: vikasprince/java-app:latest
   strategy:
     canary:
       steps:
