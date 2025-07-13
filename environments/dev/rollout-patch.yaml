@@ -9,4 +9,4 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: vikasprince/techwave:v1
+          image: pharmaacr2025.azurecr.io/pharmaacr2025/springboot-app:
