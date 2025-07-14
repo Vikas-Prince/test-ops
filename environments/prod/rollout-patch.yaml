@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: myrepo/java-app:prod
+          image: <ACR_LOGIN_SERVER>/springboot-app:v1.1.0
   strategy:
     canary:
       steps:
