@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: pharmaacr2025.azurecr.io/springboot-app:v1.0.0
+          image: vikasprince/csi-pharma-qa:b5c54850d0fe04f2f1aaf2825bf46edb283c8dda
   strategy:
     canary:
       steps:
