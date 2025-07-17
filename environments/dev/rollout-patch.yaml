@@ -9,4 +9,4 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: pharmaacr2025.azurecr.io/pharmaacr2025/springboot-app:
+          image: ghcr.io/Vikas-Prince/pharma-dev:fd364aef530fe5ce6b46c246497c6c5d2fc01df2
