@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: java-container
-          image: pharmaacr2025.azurecr.io/pharmaacr2025/springboot-app:
+          image: pharmaacr2025.azurecr.io/pharmaacr2025/csi-pharma-staging:
   strategy:
     canary:
       steps:
